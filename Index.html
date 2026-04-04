@@ -106,6 +106,12 @@
             color: black;
         }
 
+         .nav-item2 {
+            display: flex;
+            align-items: center;
+            color: black;
+        }
+
         .nav-item svg {
             width: 24px;
             height: 24px;
@@ -482,7 +488,9 @@
     <div class="main-container">
         <aside class="sidebar">
             <nav>
-                <div class="nav-item active" id="nav-raw-material-stock">
+                <div class="nav-item2 active" id="nav-raw-material-home">
+                </div>
+                <div class="nav-item" id="nav-raw-material-stock">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L8.6 3.3a2 2 0 0 0-1.7-.9H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h16z"></path></svg>
                     <span>Sales Inquiry</span>
                 </div>
@@ -549,7 +557,12 @@
                 </div>
             </div>
 
-            <div id="page-raw-material-list" class="page">
+            <div id="page-HOME" class="page">
+                <h1 class="page-title">Welcome!</h1>
+                <div class="grid-container"></div>
+            </div>
+
+            <div id="page-raw-material-list" class="page hidden">
                 <h1 class="page-title">Sales Inquiry</h1>
                 <div class="grid-container" id="raw-material-grid"></div>
             </div>
@@ -910,7 +923,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
     // --- INITIALIZATION ---
     renderSalesInquiries();
-    showPage('page-raw-material-list', true);
+    showPage('page-home', true);
     updateActiveNav('nav-raw-material-stock');
 });
 </script>
